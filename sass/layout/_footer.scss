@@ -1,0 +1,61 @@
+@use "../global/forward" as*;
+
+footer {
+	background: $accent-color;
+	padding: 62px 0 21px 0;
+
+	.footer__content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.content-box {
+			margin-bottom: 65px;
+		}
+
+		h3 {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+		li {
+			padding-left: 10px;
+			margin-bottom: 8px;
+		}
+		a {
+			color: $text-color;
+			transition: 0.3s;
+		}
+		a:hover {
+			opacity: 0.7;
+		}
+	}
+
+	small {
+		display: block;
+		font-size: 10px;
+		text-align: center;
+	}
+}
+
+@include mq(md) {
+	footer {
+		.footer__content {
+			flex-wrap: wrap;
+			justify-content: start;
+			margin-bottom: 65px;
+
+			.content-box {
+				width: 50%;
+				margin-bottom: 35px;
+			}
+
+			h3 {
+				font-size: 15px;
+			}
+
+			li {
+				font-size: 12px;
+			}
+		}
+	}
+}

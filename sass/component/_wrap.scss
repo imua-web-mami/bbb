@@ -1,0 +1,6 @@
+@use "../global/forward" as*;
+
+.wrap {
+	width: min(100% - 32px, 860px);
+	margin: 0 auto;
+}

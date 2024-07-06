@@ -1,0 +1,117 @@
+@use "../global/forward" as*;
+
+#reason {
+	margin-bottom: 124px;
+
+	.section-title {
+		margin-bottom: 103px;
+	}
+
+	.red-wall {
+		background: $main-color;
+		width: 100%;
+		padding: 80px 0;
+
+		.white-box {
+			background: $white;
+			width: 50%;
+			padding: 70px;
+			opacity: 0;
+		}
+		.white-box:nth-child(1) {
+			border-radius: 0 20px 20px 0;
+			margin-bottom: 40px;
+		}
+		.white-box:nth-child(2) {
+			border-radius: 20px 0 0 20px;
+			margin-inline: auto 0;
+		}
+	
+		.content-box {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		
+			.pc-img {
+				width: 87px;
+				object-fit: contain;
+			}
+			.person-img {
+				width: 51px;
+				object-fit: contain;
+			}
+			.text-box {
+				margin-left: 30px;
+				letter-spacing: 0.1em;
+	
+				h3 {
+					color: $main-color;
+					margin-bottom: 7px;
+				}
+				p {
+					font-size: 18px;
+					color: $text-color;
+				}
+			}
+		}
+	}
+
+	/*==================================================
+	動き自体の指定：今回は「ふわっ」
+	===================================*/
+	
+	.slideInLeft {
+		animation-name:slideInAnimeLeft;
+		animation-duration:1s;
+		animation-fill-mode:forwards;
+		opacity: 0;
+	}
+	@keyframes slideInAnimeLeft{
+		from {
+			opacity: 0;
+			transform: translateX(-50%);
+		}
+	
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	.slideInRight {
+		animation-name:slideInAnimeRight;
+		animation-duration:1s;
+		animation-fill-mode:forwards;
+		opacity: 0;
+	}
+	@keyframes slideInAnimeRight{
+		from {
+			opacity: 0;
+			transform: translateX(50%);
+		}
+	
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+}
+
+@include mq(md) {
+	#reason {
+		margin-bottom: 83px;
+
+		.section-title {
+			margin-bottom: 62px;
+		}
+
+		.red-wall {
+			padding: 40px 0;
+
+			.white-box {
+				width: calc(100vw - 36px);
+				padding: 21px 19px;
+			}
+		}
+	}
+}

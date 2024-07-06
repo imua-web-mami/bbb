@@ -1,0 +1,74 @@
+@use "../global/forward" as*;
+
+#about {
+	margin-bottom: 124px;
+	padding: 64px 0 60px 0;
+	background-image: url(../img/bg.gif);
+	animation-name: flow;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+	@keyframes flow {
+		0% {
+			background-position: 0 0;
+		}
+	
+		100% {
+			background-position: -700px 700px;
+		}
+	}
+
+	.about__content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 30px 60px;
+	}
+
+	.content-box {
+		width: 400px;
+		height: 299px;
+		background-color: $white;
+		border-radius: 20px;
+		padding: 63px 62px 63px 60px;
+
+		h3 {
+			margin-bottom: 24px;
+			text-align: center;
+		}
+		
+		.eng {
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 33px;
+		}
+	}
+}
+
+@include mq(md) {
+	#about {
+		margin-bottom: 83px;
+		padding: 63px 0 60px 0;
+
+		.about__content {
+			flex-direction: column;
+			gap: 32px;
+		}
+
+		.content-box {
+			width: 100%;
+			height: auto;
+			padding: 33px 33px 33px 32px;
+
+			h3 {
+				margin-bottom: 23px;
+			}
+
+			.eng {
+				font-size: 16px;
+			}
+		}
+	}
+}

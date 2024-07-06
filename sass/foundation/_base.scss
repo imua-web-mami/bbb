@@ -1,0 +1,19 @@
+@use "../global/forward" as*;
+
+body {
+	font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+	// font-family: "Archivo Narrow", sans-serif;
+	font-size: 16px;
+	color: $text-color;
+	letter-spacing: 0.1em;
+	line-height: 1.6;
+}
+
+h3 {
+	font-size: 28px;
+	font-weight: bold;
+
+	@include mq(md) {
+		font-size: 24px;
+	}
+}
